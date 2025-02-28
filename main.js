@@ -94,6 +94,11 @@ const openSearchBox = () => {
 const getNewsByKeyword = async () => {
   const keyword = document.getElementById("search-input").value;
 
+  if(!keyword) {
+    alert("검색어를 입력하세요")
+    return;
+  }
+
   page = 1;
   // url = new URL(
   //   `https://newsapi.org/v2/top-headlines?q=${keyword}&country=kr&pageSize=${PAGE_SIZE}&apiKey=${API_KEY}`
